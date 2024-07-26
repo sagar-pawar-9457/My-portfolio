@@ -18,7 +18,7 @@ html,body{
 :root{
     --background-Color:#1e2039;
     --font-Color:#429bd7;
-    --extra-Color:rgba(94, 94, 204, 0.402);
+    --hover-color: hsla(0, 0%, 100%, .25);
 }
 .nav_container{
     height: 60px;
@@ -29,6 +29,9 @@ html,body{
     align-items: center;
     margin: 0 auto;
     border-bottom: 2px solid var(--font-Color);
+    position:fixed;
+    top: 0;
+    z-index: 1;
 }
 .nav_logo {
     margin-left: 11%;
@@ -72,6 +75,7 @@ html,body{
     display: none;
 }
 
+
 @media (max-width:480px){
     .nav_logo {
         margin-left: 0rem;
@@ -86,6 +90,7 @@ html,body{
        display: inline-block;
        font-size: 1.5rem;
     }
+    
     .nav_links_social{
         margin-right: 0;
     }
@@ -122,11 +127,12 @@ html,body{
     flex-wrap: nowrap;
 }
 .hero_first{
-    margin-top: 5%;
+    margin-top: 10%;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     border-bottom:3px solid  #429bd7;
+    margin-bottom: 1rem;
 }
 .hero_container strong{
     color: #1a9aef;
@@ -274,12 +280,16 @@ html,body{
         display: none;
     }
 }
+.heading_about p{
+    margin-top: 5rem;
+}
 .heading_about p,h2{
     text-align: center;
 }
 .heading_about h2{
     font-size: 2.1rem;
     color: #1a9aef;
+    letter-spacing: 0.4rem;
 }
 .about_container {
     height: 603px;
@@ -287,7 +297,6 @@ html,body{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     place-items: center;
-    /* background-color: aqua; */
     margin: 0 auto;
 }
 .about_img{
@@ -315,6 +324,7 @@ html,body{
     display: flex;
     flex-direction: column;
     padding: 1rem;
+    margin-right: 1rem;
 }
 .right_about_text strong{
     font-size: 1.2rem;
@@ -322,7 +332,7 @@ html,body{
     color: #1a9aef;
 }
 .right_about_text p{
-    font-size: .85rem;
+    font-size: 0.85rem;
     margin-bottom: 1rem;
     max-width: 350px;
 }
@@ -338,4 +348,204 @@ html,body{
     padding: 0.2rem 0.8rem;
     border-radius: 10px;
     border: 1px solid white;
+}
+@media (max-width:810px){
+    .about_container{
+        width: 50%;
+       display: flex;
+       flex-direction: column;
+       margin-top: 5rem;
+    }
+    .about_img{
+       height: 200px;
+       width: 150px;
+    }
+    .right_about_text p,.right_contact_details ul li ,.right_button button{
+        font-size: 0.65rem; 
+    }
+    .right_about_text strong{
+        font-size: 0.99rem;
+    }
+}
+/* skills selection  */
+.heading_skills p{
+    text-align: center;
+    margin-top: 5%;
+}
+.heading_skills h2{
+    letter-spacing: 0.4rem;
+    color: #1a9aef;
+}
+.skills_selection_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.skills_button button{
+    margin-top: 3rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    background-color: #1a9aef;
+    color: white;
+}
+.skills_img{
+    width: 40%;
+    margin-top: 1rem;
+}
+.skills_img img{
+    color: white;
+    height: 70px;
+    width: 70px;
+    margin-left: 1rem;
+    margin: 1rem;
+    aspect-ratio: 1/2;
+    border-radius: 14px;
+}
+.skills_details{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+@media (max-width:800px){
+    .heading_skills p{
+        margin-top: 5rem;
+        font-size: 0.5rem;
+    }
+    .heading_skills h2 {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    .skills_selection_container button{
+       margin: 0.1rem;
+       font-size: 0.8rem;
+       padding: 0 0.4rem;
+       margin-top: 2rem;
+    }
+    .skills_img {
+        margin-left: 3.5rem;
+    }
+    .skills_img img{
+        height: 60px;
+        width: 60px;
+        margin:0rem;
+        margin-left: 0.36rem;
+        margin-top: 1rem;
+    }
+    .skills_details{
+        display: flex;
+        margin-left: 1.2rem;
+        width: 80%;
+        flex-wrap: wrap;
+    }
+    .skills_experience p,.skills_github p,.skills_connection p,.skills_rect p{
+        width: 100%;
+        font-size: 0.91rem;
+    }
+   .skills_experience:first-child,.skills_rect p:first-child,.skills_connection p:first-child,.skills_github p:first-child{
+    margin-top: 2rem;
+   }
+}
+@media (max-width:615px){
+    .heading_skills p{
+        margin-top: 5rem;
+        font-size: 0.5rem;
+    }
+    .heading_skills h2 {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    .skills_button button {
+        margin:0rem;
+        margin-top: 1rem;
+        margin-left: 0.1rem;
+        padding: 0.3rem;
+        font-size: 0.6rem;
+    }
+    .skills_img {
+        margin-left: 3.5rem;
+    }
+    .skills_img img{
+        height: 50px;
+        width: 50px;
+        margin:0rem;
+        margin-left: 0.2rem;
+        margin-top: 1rem;
+    }
+    .skills_details{
+        display: flex;
+        flex-direction: column;
+    }
+    .skills_experience p{
+        width: 100%;
+        font-size: 0.8rem;
+       
+    }
+   .skills_experience:first-child,.skills_rect p:first-child,.skills_connection p:first-child,.skills_github p:first-child{
+    margin-top: 2rem;
+   }
+}
+
+.heading_Projects p{
+    text-align: center;
+    margin-top: 5rem;
+}
+.heading_Projects h2{
+    letter-spacing: 0.4rem;
+}
+.projects_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.2rem;
+}
+.projects_button button{
+    padding: 0.2rem 0.6rem;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+    background-color: #1a9aef;
+    color: white;
+}
+.project_show {
+    width: 70%;
+    height: 50%;
+    margin: 0 auto;
+    grid-gap: 0.1rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 5rem;
+    flex-wrap: wrap;
+}
+.project_first{
+    border-radius: 5px;
+    box-shadow: 0 0 10px hsla(0, 0%, 100%, .15);
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 170px;
+}
+.project_first img{
+    height: 160px;
+    width: 160px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 170px;
+    padding: 1rem;
+    position: relative;
+    opacity: 1;
+}
+.project_first img:hover{
+    opacity: 0;
+}
+.project_first:hover{
+    background-color: #1a9aef;
 }
